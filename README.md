@@ -1,2 +1,2 @@
 # DotFiles
-Personal Config files
+Personal instruction and config files
