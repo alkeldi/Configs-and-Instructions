@@ -3,8 +3,9 @@ Start server:
 2. Visit: `http://127.0.0.1/`
 
 Change Root Directory:
-1. Replace `DocumentRoot "/Library/WebServer/Documents"` with your `DocumentRoot "your_root_path"`
-2. Replace `<Directory "/Library/WebServer/Documents">` with your `<Directory "your_root_path">`
+1. `sudo vim /etc/apache2/httpd.conf`
+2. Replace `DocumentRoot "/Library/WebServer/Documents"` with your `DocumentRoot "your_root_path"`
+3. Replace `<Directory "/Library/WebServer/Documents">` with your `<Directory "your_root_path">`
 
 Enable PHP:
 1. `sudo vim /etc/apache2/httpd.conf`
