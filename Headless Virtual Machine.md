@@ -1,7 +1,7 @@
 
 Virtual Box
 
-#Install ssh client on the virtual machine
+#Install ssh server on the virtual machine
 	
   `(client dependent)`
 
