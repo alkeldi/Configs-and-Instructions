@@ -4,3 +4,9 @@ git config --global user.email "EMAIL"
 
 #Save Login Information
 git config --global credential.helper store
+
+#Set Vim as a Default Editor
+git config --global core.editor "vim"
+
+#Modify Last Commit Message
+git commit --amend
