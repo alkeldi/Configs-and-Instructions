@@ -18,6 +18,7 @@ git_branch() {
    alias grep="grep --color=auto"
    alias ngrep="grep --color=auto -n"
    alias chat="write"
+   alias gdb='gdb -quiet'
 
    ################## REMOVE THE FOLLOWING ##################
    #xinu setup
