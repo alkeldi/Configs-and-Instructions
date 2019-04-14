@@ -3,19 +3,11 @@ set disassemble-next-line on
 layout asm 
 layout regs
 focus cmd 
-
-define hook-nexti
-refresh
-end
-
-define hook-stepi
-refresh
-end
-
-define hook-next
-refresh
-end
-
-define hook-step
-refresh
+########## Refresh Screen -- important for tui mode ########
+python
+import gdb 
+def prompt(current):
+    gdb.execute("refresh")
+    return current
+gdb.prompt_hook = prompt
 end
