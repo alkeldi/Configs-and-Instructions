@@ -17,7 +17,7 @@ ssh_command="ssh -D $port -f -C -q -N $username@$server"
 enable_socks() {
 
   #check if enabled
-  ssh_process=$(ps aux | pgrep -f "$ssh_command")
+  ssh_process=$(pgrep -f "$ssh_command")
   if [ ! -z "$ssh_process" ];
   then 
     echo "Error: SOCKS is already enabled."
@@ -35,7 +35,7 @@ enable_socks() {
 disable_socks() {
   networksetup -setsocksfirewallproxystate Wi-Fi off
   echo "SOCKS proxy disabled."
-  ssh_process=$(ps aux | pgrep -f "$ssh_command")
+  ssh_process=$(pgrep -f "$ssh_command")
   if [ ! -z "$ssh_process" ];
   then
     kill -9 $ssh_process
