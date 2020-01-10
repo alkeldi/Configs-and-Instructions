@@ -1,0 +1,28 @@
+#!/bin/zsh
+
+#log file
+log=".$(basename "$0").log"
+
+#Change mac address
+function change_mac(){
+    original_mac=$(ifconfig en0 ether | sed "3q;d" | awk '{print $2}')
+    while true ; do
+        new_mac=$(openssl rand -hex 6 | sed 's/\(..\)/\1:/g; s/.$//')
+        sudo ifconfig en0 ether $new_mac
+        current_mac=$(ifconfig en0 ether | sed "3q;d" | awk '{print $2}')
+        if test "$current_mac" != "$original_mac"
+        then
+            echo "$current_mac    $(date)" >> $log
+            break
+        else
+            echo "$new_mac    (Invalid)" >> $log
+        fi  
+    done
+    echo "" >> $log
+}
+
+#Change mac every 24 hours
+while true; do
+    change_mac;
+    sleep 86400;
+done
