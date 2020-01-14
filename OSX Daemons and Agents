@@ -1,0 +1,18 @@
+#list loaded daemons
+sudo launchctl list
+
+#list loaded agents
+launchctl list
+
+#show loaded daemon's info (<com.example.daemon>)
+sudo launchctl list com.example.daemon
+
+#show loaded agent's info (<com.example.agent>)
+launchctl list <com.example.agent>
+
+#convert daemon's info to json
+sudo launchctl list com.example.daemon | plutil -convert json test -o -
+
+#convert agent's info to json
+launchctl list com.example.daemon | plutil -convert json test -o -
+
