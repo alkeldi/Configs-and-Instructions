@@ -16,6 +16,4 @@ PS1="$GREEN\u@\h$WHITE:$BLUE\W$YELLOW\$(git_branch)$WHITE$ "
 #Commands shortcuts
 alias ls="ls -hFl --color=auto"
 alias grep="grep --color=auto"
-alias ngrep="grep --color=auto -n" 
-alias chat="write"
 alias gdb='gdb -quiet'
