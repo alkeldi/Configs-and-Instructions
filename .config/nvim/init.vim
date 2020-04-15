@@ -74,7 +74,9 @@ function! OnIDEMode()
         wincmd p
         ene
         exe 'cd '.argv()[0]
+        NERDTreeToggle
         call TerminalToggle()
+        NERDTreeToggle
     endif
 endfunction
 autocmd VimEnter * call OnIDEMode()
