@@ -17,7 +17,7 @@ if [ $(uname) = "Darwin" ]; then
     export PATH="$HOME/Library/Android/sdk/platform-tools:$PATH"    # Android sdk
 # Linux Specific
 else
-    export PS1='%B$PS1%b'                   # Use bold prompt in linux
+    export PS1="%B$PS1%b"                   # Use bold prompt in linux
     alias ls="ls -lh --color=auto"          # Better ls
 fi
 
