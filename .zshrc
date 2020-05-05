@@ -5,7 +5,7 @@ zstyle ':vcs_info:git:*' formats ' %11F( %b)%f'
 
 # set prompt
 setopt PROMPT_SUBST
-export PS1='%40F%n@%m%f:%31F%2~%f${vcs_info_msg_0_} \$ '
+export PS1='%B%40F%n@%m%f:%31F%2~%f${vcs_info_msg_0_} \$ %b'
 
 # OSX Specific
 if [ $(uname) = "Darwin" ]
