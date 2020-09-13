@@ -15,6 +15,8 @@ if [ $(uname) = "Darwin" ]; then
     export PATH="/usr/local/opt/python/libexec/bin/:$PATH"          # Python3 symlink as python
     export PATH="/usr/local/opt/llvm/bin:$PATH"	                    # LLVM package for clangd
     export PATH="$HOME/Library/Android/sdk/platform-tools:$PATH"    # Android sdk
+    export PATH="/usr/local/opt/bison/bin:$PATH"                    # Bison
+    export PATH="/usr/local/opt/flex/bin:$PATH"                     # Flex
 # Linux Specific
 else
     export PS1="%B$PS1%b"                   # Use bold prompt in linux
